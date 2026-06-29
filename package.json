@@ -3,12 +3,23 @@
   "version": "1.0.0",
   "description": "PA Discovery OS widget assets (JS + CSS)",
   "license": "UNLICENSED",
+  "type": "module",
   "files": [
     "dist"
   ],
   "exports": {
-    "./js": "./dist/pa-widgets.js",
+    "./js": {
+      "import": "./dist/pa-widgets.js",
+      "default": "./dist/pa-widgets.js"
+    },
     "./css": "./dist/pa-widgets.css",
+    "./hydrogen": {
+      "import": "./dist/pa-hydrogen.js",
+      "worker": "./dist/pa-hydrogen.js",
+      "workerd": "./dist/pa-hydrogen.js",
+      "browser": "./dist/pa-hydrogen.js",
+      "default": "./dist/pa-hydrogen.js"
+    },
     "./package.json": "./package.json"
   },
   "sideEffects": [
